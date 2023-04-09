@@ -1,0 +1,29 @@
+.categories-filter {
+  padding: 8px 11px 8px 14px;
+  margin-right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+
+  .icon {
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+    transform: rotate(0deg);
+    transition: 0.2s;
+  }
+
+  &.visible {
+
+    .icon {
+      transition: 0.2s;
+      transform: rotate(180deg);
+      margin-top: 10px;
+    }
+  }
+}

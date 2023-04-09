@@ -1,0 +1,67 @@
+.buy-offer-info {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin: 0 20px;
+
+    path {
+      opacity: 0.4;
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: unset;
+
+    .purchase-item {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(255, 255, 255, 0.3);
+      background: #1B1726;
+      padding: 19.5px 15px 14.5px 15px;
+      border-radius: 20px 20px 0px 0px;
+    }
+
+    .icon {
+      display: none;
+    }
+
+    .rpgc-value {
+      padding: 6.5px 15px 25px 15px;
+      background: #1B1726;
+      margin-bottom: 1px;
+
+      .currency {
+
+        span {
+          display: flex;
+        }
+      }
+    }
+
+    .purchase-info {
+      display: flex;
+      background: #1B1726;
+      padding: 19.5px 15px 14.5px 15px;
+
+      .purchase-item {
+        padding: 0;
+        margin-top: 5px;
+      }
+
+      .avatar-name {
+        margin-left: 10px;
+      }
+    }
+
+    .item-info {
+      padding: 0 15px 14.5px 15px;
+      background: #1B1726;
+      margin-bottom: 1px;
+    }
+  }
+}

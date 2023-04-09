@@ -1,0 +1,177 @@
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  animation: modal-appear 0.2s ease-in-out;
+
+  &.closed {
+    animation: modal-disappear 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 1269px) {
+    position: fixed;
+  }
+}
+
+.confirmation-modal {
+  position: absolute;
+  z-index: 60;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 40px 60px;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  background: linear-gradient(153.27deg, #262134 0%, #1B1726 100%);
+  border-radius: 20px;
+  animation: modal-appear 0.2s ease-in-out;
+
+  &.closed {
+    animation: modal-disappear 0.2s ease-in-out;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+
+  .prompt {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+
+  .modal-actions {
+    display: flex;
+
+    button {
+      border: none;
+    }
+
+    .cancel-btn {
+      cursor: pointer;
+      background: rgba(16, 15, 24, 0.5);
+      border-radius: 100px;
+      padding: 17px 51px;
+      margin-right: 20px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 26px;
+      color: #FFFFFF;
+      transition: 0.2s;
+
+      &:hover {
+        background: #332D43;
+      }
+    }
+
+    .action-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 17px 37px;
+      background: #D0383F;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 26px;
+      color: #FFFFFF;
+      transition: 0.2s;
+
+      &:hover {
+        background: #AD171E;
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    top: unset;
+    box-shadow: 0 0 40px rgba(11, 10, 17, 0.4);
+    border-radius: 40px 40px 0 0;
+    padding: 30px;
+    position: fixed;
+    margin: 0;
+    width: unset;
+    animation: bottom-appear 0.2s ease-in-out;
+
+    &.closed {
+      animation: bottom-disappear 0.2s ease-in-out;
+    }
+
+    .title {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    .prompt {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-direction: column;
+
+      .cancel-btn {
+        padding: 12px 0;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 26px;
+        width: 100%;
+      }
+
+      .action-btn {
+        justify-content: center;
+        padding: 12px 0;
+        font-size: 18px;
+        line-height: 26px;
+        width: 100%;
+
+        //.icon {
+        //  width: 20px;
+        //  height: 20px;
+        //  margin-right: 15px;
+        //}
+      }
+    }
+  }
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-disappear {
+  from {
+    opacity: 1;
+
+  }
+  to {
+    opacity: 0;
+  }
+}

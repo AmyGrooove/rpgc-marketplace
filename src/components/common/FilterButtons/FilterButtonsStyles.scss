@@ -1,0 +1,76 @@
+.filter-buttons-container {
+  display: flex;
+  align-items: center;
+
+  .filter-div {
+    display: flex;
+    align-items: center;
+
+    .filter-button {
+      position: relative;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #a4a2a8;
+      padding: 14px 30px;
+      background: none;
+      cursor: pointer;
+      border: none;
+      transition: 0.2s;
+      border-radius: 100px;
+      border: 1px solid transparent;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+
+      &#active {
+        color: #ffffff;
+        border: 1px solid #ad171e;
+      }
+
+      .dot {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: #E7C92A;
+        border-radius: 100px;
+        margin-left: 10px;
+        top: 20px;
+      }
+
+      &.trades {
+        padding: 14px 41px 14px 30px;
+      }
+
+      @media screen and (max-width: 1269px) {
+        font-size: 14px;
+        padding: 9px 15px;
+
+        .dot {
+          width: 6px;
+          height: 6px;
+          top: 16px;
+        }
+
+        &.trades {
+          padding: 9px 31px 9px 15px;
+        }
+      }
+    }
+
+    .filter-border {
+      width: 2px;
+      height: 20px;
+      transition: 0.2s;
+
+      &#active {
+        background: #2c2a34;
+      }
+
+      @media screen and (max-width: 1269px) {
+        width: 1px;
+      }
+    }
+  }
+}

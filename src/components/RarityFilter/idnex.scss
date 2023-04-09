@@ -1,0 +1,62 @@
+.rarity-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  .rarity-filter-item {
+    cursor: pointer;
+    display: flex;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    border-radius: 100px;
+    transition: 0.2s;
+
+    &:nth-child(3) {
+      margin-right: 10px;
+
+      @media screen and (max-width: 1269px) {
+        margin: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      margin: 0;
+
+      @media screen and (max-width: 1269px) {
+        margin: 10px 0 0 0;
+      }
+    }
+
+    span {
+      margin: auto 10px;
+      color: #a4a2a8;
+      transition: 0.2s;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+
+    &_rare {
+      background: rgba(40, 51, 149, 0.7);
+      color: #FFFFFF;
+    }
+
+    &_special {
+      background: rgba(101, 40, 149, 0.7);
+      color: #FFFFFF;
+    }
+
+    &_legendary {
+      background: rgba(40, 129, 149, 0.7);
+      color: #FFFFFF;
+    }
+
+    &_last {
+      background: rgba(149, 40, 40, 0.7);
+      color: #FFFFFF;
+    }
+  }
+}

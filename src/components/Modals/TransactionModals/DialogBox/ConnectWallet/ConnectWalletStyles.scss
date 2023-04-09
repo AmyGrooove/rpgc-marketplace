@@ -1,0 +1,70 @@
+.connect-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (max-width: 761px) {
+    gap: 10px;
+    width: 315px;
+    margin: 0 auto;
+  }
+
+  .connect-buttons {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 761px) {
+      padding-bottom: 30px;
+      justify-content: center;
+    }
+
+    .connect-button {
+      border: 1px solid #363845;
+      border-radius: 10px;
+      width: 160px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: 0.2s;
+      cursor: pointer;
+
+      @media screen and (max-width: 761px) {
+        width: 150px;
+        height: 110px;
+
+        &#metamask {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background: #363845;
+      }
+
+      img {
+        height: 40px;
+        width: 40px;
+
+        @media screen and (max-width: 761px) {
+          height: 40px;
+          width: 50px;
+        }
+      }
+
+      .connect-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+
+        @media screen and (max-width: 761px) {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

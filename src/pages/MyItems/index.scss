@@ -1,0 +1,77 @@
+.my-items {
+  width: 1270px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+
+  .left-panel {
+    margin-right: 20px;
+  }
+
+  .categories-filter-container {
+    margin-top: 20px;
+    border-radius: 20px;
+  }
+
+  .content-container {
+    width: 960px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    .item-card-container {
+      cursor: default;
+    }
+  }
+
+  .rarity-icon {
+    position: absolute;
+  }
+
+  .actions-container {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10.5px 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .lock-icon {
+    position: absolute;
+    left: 83px;
+    top: 82px;
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 1269px) {
+    width: unset;
+    padding: 15px 0;
+
+    .left-panel {
+      display: none;
+    }
+
+    .lock-icon {
+      left: 67px;
+      top: 60px;
+    }
+
+    .content-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+
+      .dropdown-menu {
+
+        span:first-child {
+          width: unset;
+        }
+      }
+    }
+  }
+}

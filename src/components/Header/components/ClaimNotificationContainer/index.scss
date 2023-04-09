@@ -1,0 +1,17 @@
+.claim-notification-container {
+  display: flex;
+  align-items: center;
+
+  .icon.grey-cross {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+
+    svg {
+      position: absolute;
+    }
+  }
+}

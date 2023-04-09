@@ -1,0 +1,249 @@
+.content-container {
+  width: 320px;
+  position: relative;
+  margin: 0 auto;
+
+  .block-header {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+  }
+
+  .profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin-right: 21px;
+    }
+
+    .refresh-icon {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 58px;
+      width: 22px;
+      height: 22px;
+      background: #332D43;
+      border-radius: 100px;
+
+      .icon {
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        transition: 0.2s;
+        transform: rotate(0deg);
+
+        svg {
+          position: absolute;
+          height: 16px;
+          left: 0;
+        }
+      }
+
+      &:hover {
+
+        .icon {
+          transition: 0.2s;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .profile-data {
+
+      .profile-name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 100%;
+        color: #0B0A11;
+      }
+
+      .profile-email {
+        margin-top: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #696478;
+      }
+
+      .logout-button {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .actions {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #0B0A11;
+
+    .wallet {
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          padding: 0 5px;
+
+          &:hover {
+            svg {
+              cursor: default;
+              path {
+                fill: #FFFFFF;
+              }
+            }
+          }
+        }
+
+        span:nth-child(3) {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 100%;
+          color: #696478;
+        }
+      }
+    }
+
+    .horizontal-divider {
+      height: 1px;
+      background: #A4A2A8;
+      opacity: 0.3;
+      margin: 15px 0;
+    }
+
+    .claim {
+      .claim-notification {
+        display: flex;
+        justify-content: space-between;
+
+        .icon.circles {
+          display: none;
+        }
+
+        .icon {
+
+          &:hover {
+            svg {
+              cursor: default;
+              path {
+                fill: #5A536D;
+              }
+            }
+          }
+        }
+
+        .reward-info {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    .actions {
+      margin-top: 25px;
+
+      .claim {
+
+        .claim-notification {
+
+          .reward-info {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .rpgc-value-light {
+              margin: 5px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    .block-header {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      top: 0;
+      right: 0;
+      margin-bottom: 30px;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: #0B0A11;
+      }
+    }
+
+    .wallet-actions {
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: #0B0A11;
+
+      .balance {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #696478;
+
+        .rpgc-value-light {
+          margin-top: 5px;
+        }
+      }
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 16px;
+        color: #5A536D;
+      }
+
+      .red-btn {
+        position: absolute;
+        right: 0;
+        padding: 8px 12px;
+        background: #D0383F;
+        border-radius: 100px;
+        width: fit-content;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "src/pages/ListingItem/components/OrdersList/index";
+
+.history {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1270px;
+  border-radius: 20px;
+
+  .row {
+    @include rows-style;
+
+    .left,
+    .right {
+      display: flex;
+    }
+
+    .left {
+      margin: 0 0 0 30px;
+    }
+
+    .right {
+      margin: 25px 30px 25px 0;
+    }
+
+    @media screen and (max-width: 1269px) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 10px 0;
+      background-color: transparent !important;
+
+      .left {
+        display: flex;
+        margin: 0;
+      }
+
+      .right {
+        display: flex;
+        justify-content: space-between;
+        margin: 1px 0 0 0;
+        padding: 15px;
+        background: #181422;
+        border-radius: 0px 0px 20px 20px;
+        width: 92%;
+        min-width: 345px;
+
+        .type-n-date {
+          display: flex;
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            align-self: center;
+            margin-right: 15px;
+
+            path {
+              opacity: 0.4;
+            }
+          }
+        }
+
+        .type-and-date {
+          margin: 3px 0 0 0;
+
+          .type {
+            display: none;
+          }
+
+          .separator {
+            display: none;
+          }
+        }
+
+        .actions {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    width: unset;
+    margin: 0;
+  }
+}

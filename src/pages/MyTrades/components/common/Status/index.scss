@@ -1,0 +1,21 @@
+.trades-status {
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  margin: 0 30px 0 0;
+  height: fit-content;
+
+  div {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #FFFFFF;
+    opacity: 0.2;
+    user-select: none;
+  }
+
+  @media screen and (max-width: 1269px) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,87 @@
+.price-sort {
+  position: relative;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+
+  .sort-type {
+    display: flex;
+    padding: 8px 12px 8px 16px;
+    background: #332d43;
+    border-radius: 100px;
+    user-select: none;
+
+    span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: #ffffff;
+    }
+
+    .icon {
+      margin: 0 0 0 10px;
+      transition: 0.2s;
+    }
+  }
+
+  .popup {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 1;
+    animation: anim 0.2s;
+
+    ul {
+      background: #FFFFFF;
+      box-shadow: 0 4px 40px rgba(11, 10, 17, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      width: fit-content;
+      white-space: nowrap;
+      margin-block-start: 10px;
+      margin-block-end: 0;
+      padding-inline-start: 20px;
+      list-style-type: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: #0B0A11;
+    }
+
+    li {
+      margin-top: 20px;
+    }
+
+    li:first-child {
+      color: #5A536D;
+      margin-top: 0;
+    }
+
+    &.visible {
+      display: flex;
+    }
+  }
+
+  &:hover .icon {
+    transform: rotate(180deg);
+
+    g {
+      opacity: 1;
+    }
+
+    path {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

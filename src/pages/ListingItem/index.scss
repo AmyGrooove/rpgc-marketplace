@@ -1,0 +1,70 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 1270px;
+  margin: 0 auto;
+  padding: 40px;
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 290px;
+
+    .card-price {
+      margin: 0 auto;
+
+      &.fixed {
+        position: fixed;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin: 0;
+      }
+    }
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+
+    @media screen and (max-width: 1269px) {
+      margin-left: 0;
+    }
+  }
+
+  .mobile-red-btn {
+    display: none;
+
+    @media screen and (max-width: 1269px) {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+
+      .icon {
+        display: flex;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  }
+
+  .pagination {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 1269px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+
+    .left-container {
+      width: unset;
+    }
+  }
+}

@@ -1,0 +1,369 @@
+.my-trades-toolbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .dropdown-menus {
+    display: flex;
+    flex-direction: row;
+
+    .date-dropdown-container {
+      cursor: pointer;
+      height: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+      .title {
+        display: flex;
+        padding: 8px 12px 8px 16px;
+        background: #332D43;
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        color: #FFFFFF;
+      }
+
+      .icon.down-arrow {
+        margin-left: 8px;
+        transform: rotate(0deg);
+        transition: 0.2s;
+      }
+
+      &.visible {
+
+        .icon.down-arrow {
+          transition: 0.2s;
+          transform: rotate(180deg);
+
+          g {
+            opacity: 1;
+          }
+
+          path {
+            fill: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+
+  .react-calendar {
+    cursor: default;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    margin-top: 20px;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(11, 10, 17, 0.6);
+    border-radius: 10px;
+    animation: anim 0.2s ease-in-out;
+
+    button {
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+      flex: unset !important;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    &__navigation {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto 11px auto;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: #0B0A11;
+
+      &__prev-button {
+
+        .icon {
+          margin-right: 20px;
+        }
+      }
+
+      &__next-button {
+
+        .icon {
+          margin-left: 20px;
+        }
+      }
+
+      &__prev2-button {
+        display: none;
+      }
+
+      &__next2-button {
+        display: none;
+      }
+
+      .icon {
+        cursor: pointer;
+      }
+    }
+
+    &__month-view {
+
+      &__weekdays {
+        color: #A4A2A8;
+        padding: 2px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &__weekday {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: unset !important;
+          width: 35px;
+          height: 25px;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 100%;
+
+          abbr {
+            text-decoration: none;
+          }
+        }
+      }
+
+      &__days {
+
+        &__day {
+          cursor: pointer;
+          width: 35px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 11px !important;
+
+          &--neighboringMonth {
+            color: #A4A2A8;
+          }
+        }
+      }
+    }
+
+    &__tile--active {
+      background: #D0383F !important;
+      border-radius: 100px !important;
+      color: #FFFFFF;
+    }
+
+    &__tile--hasActive {
+      background: #D0383F !important;
+      border-radius: 100px !important;
+      color: #FFFFFF;
+    }
+
+    &__century-view {
+      display: flex;
+      width: 275px;
+
+      &__decades {
+        display: flex;
+
+        &__decade {
+          height: 30px;
+          width: 90px;
+        }
+      }
+
+      @media screen and (max-width: 1269px) {
+        width: 100%;
+
+        &__decades {
+          justify-content: space-between;
+
+          &__decade {
+           color: #FFFFFF;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    &__decade-view {
+      display: flex;
+      width: 275px;
+
+      &__years {
+        display: flex;
+        justify-content: center;
+
+        &__year {
+          height: 30px;
+          width: 50px;
+        }
+      }
+
+      @media screen and (max-width: 1269px) {
+
+        &__years {
+
+          &__year {
+            height: 50px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+
+    &__year-view {
+      display: flex;
+      width: 275px;
+
+      &__months {
+        display: flex;
+        justify-content: center;
+
+        &__month {
+          height: 35px;
+          width: 90px;
+
+          @media screen and (max-width: 1269px) {
+            color: #FFFFFF;
+            height: 50px;
+            width: 100px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1269px) {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 1269px) {
+      position: relative;
+      top: unset;
+      margin: 0 auto;
+      background: unset;
+      box-shadow: unset;
+      padding: 0;
+      width: 305px;
+
+      &__viewContainer {
+        display: flex;
+        justify-content: center;
+      }
+
+      &__navigation {
+        margin: 0 auto 25px auto;
+
+        &__label {
+          color: #FFFFFF;
+        }
+      }
+
+      &__month-view {
+
+        &__weekdays {
+          color: rgba(255, 255, 255, 0.3);
+          padding: 2px 0;
+          border-bottom: 1px solid rgba(151, 145, 171, 0.1);
+          justify-content: space-between;
+        }
+
+        &__days {
+          justify-content: space-between;
+
+          &__day {
+            margin: 25px 10px 0 0 !important;
+            color: #FFFFFF;
+
+            &--neighboringMonth {
+              color: rgba(255, 255, 255, 0.3);
+            }
+          }
+
+          &__day:nth-child(7) {
+            margin: 25px 0 0 0 !important;
+          }
+
+          &__day:nth-child(14) {
+            margin: 25px 0 0 0 !important;
+          }
+
+          &__day:nth-child(21) {
+            margin: 25px 0 0 0 !important;
+          }
+
+          &__day:nth-child(28) {
+            margin: 25px 0 0 0 !important;
+          }
+
+          &__day:nth-child(35) {
+            margin: 25px 0 0 0 !important;
+          }
+
+          &__day:nth-child(42) {
+            margin: 25px 0 0 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    width: unset;
+    padding: 0 15px;
+    margin-bottom: 15px;
+
+    &.history-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      .dropdown-menus {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+
+        .dropdown-menu {
+          display: flex;
+        }
+
+        .mobile-filter {
+          width: 92px;
+          margin: 0 auto;
+          justify-content: center;
+        }
+
+        .divider {
+          width: 1px;
+          height: 20px;
+          background: rgba(255, 255, 255, 0.1);
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    .dropdown {
+
+      .filter-container {
+
+        .dropdown-menu {
+          display: flex;
+        }
+      }
+    }
+  }
+}

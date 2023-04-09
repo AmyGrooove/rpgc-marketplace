@@ -1,0 +1,94 @@
+.exchange-offer-info {
+  display: flex;
+  margin: 16px 0;
+
+  .more-btn {
+    cursor: pointer;
+    width: fit-content;
+    padding: 8px 12px;
+    background: #332D43;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .my-offer {
+    // align-self: flex-start;
+  }
+
+  .member-offer {
+    // align-self: flex-start;
+  }
+
+  .sub-row {
+     padding: 0 0 15px 0;
+
+    &:last-child {
+      padding: 0 0 1px 0;
+    }
+  }
+
+  .icon {
+    padding: 14px 20px;
+    width: 20px;
+    height: 20px;
+
+    path {
+      opacity: 0.4;
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .icon {
+      display: none;
+    }
+
+    .my-offer {
+      margin-bottom: 1px;
+      background: #1B1726;
+      padding: 15px;
+      border-radius: 20px 20px 0px 0px;
+
+      .sub-row {
+        margin-top: 5px;
+      }
+    }
+
+    .member-offer {
+      background: #1B1726;
+      padding: 15px;
+
+      .member-info-mobile {
+        display: flex;
+
+        .avatar-name {
+          margin-left: 10px;
+        }
+      }
+
+      .sub-row {
+        margin-top: 10px;
+      }
+    }
+
+    .more-btn {
+      font-size: 12px;
+    }
+
+    .exchange-item {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(255, 255, 255, 0.3);
+      background: #1B1726;
+      margin-top: 5px;
+    }
+  }
+}

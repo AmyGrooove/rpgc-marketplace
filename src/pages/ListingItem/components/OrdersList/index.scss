@@ -1,0 +1,115 @@
+@mixin rows-style {
+  display: flex;
+  justify-content: space-between;
+
+  &:nth-child(odd) {
+    background-color: #1b1726ff;
+  }
+
+  &:nth-child(even) {
+    background-color: #181522;
+  }
+
+  &:first-child {
+    border-radius: 20px 20px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 20px 20px;
+  }
+
+  &:hover {
+    background: #262134;
+  }
+}
+
+.orders-list {
+  width: 100%;
+  border-radius: 20px;
+
+  .row {
+    @include rows-style;
+
+    .left {
+      margin: 15px 0 15px 30px;
+
+      @media screen and (max-width: 1269px) {
+        margin: 15px 0 0 15px;
+
+        .avatar-name {
+          width: 150px;
+          flex-basis: 50%;
+
+          .name {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      margin: 0 30px 0;
+
+      .exchange-block {
+        margin: 0 0 0 60px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        .exchange {
+          &.inactive {
+            opacity: 0.1;
+            cursor: default;
+          }
+
+          &:hover:not(.inactive) svg path {
+            fill: #d0383f;
+          }
+        }
+
+        @media screen and (max-width: 1269px) {
+          margin: 0 0 0 20px;
+        }
+      }
+
+      .action-block {
+        margin-left: 30px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        .action {
+          &.inactive {
+            opacity: 0.1;
+            cursor: default;
+          }
+
+          &:hover:not(.inactive) svg path {
+            fill: #d0383f;
+          }
+        }
+
+        @media screen and (max-width: 1269px) {
+          margin-left: 20px;
+        }
+      }
+
+      @media screen and (max-width: 1269px) {
+        margin: 0 15px 0 0;
+      }
+    }
+  }
+
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@mixin list-text {
+}

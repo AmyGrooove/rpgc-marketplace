@@ -1,0 +1,82 @@
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  animation: anime 0.2s;
+  transition: 0.2s;
+}
+
+.modal {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: fit-content;
+  height: fit-content;
+  animation: anime 0.2s;
+  z-index: 101;
+  transition: 0.2s;
+
+  &.modal-mobile {
+    @media screen and (max-width: 761px) {
+      transition: 0.3s;
+      top: unset;
+      width: 100%;
+      animation: mobile-anime 0.3s;
+    }
+  }
+}
+
+.block {
+  padding: 50px;
+  border: 5px solid red;
+  background: white;
+}
+
+@keyframes anime {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes mobile-anime {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.connect-profile {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 101;
+  animation: top-appear 0.2s;
+  transition: 0.2s;
+}
+
+@keyframes connect-appear {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+
+  to {
+    opacity: 1;
+    top: 90px;
+  }
+}

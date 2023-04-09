@@ -1,0 +1,28 @@
+.rarity {
+  display: flex;
+  position: relative;
+  height: 38px;
+  width: auto;
+  min-width: 43px;
+
+  img {
+    position: absolute;
+    top: 5px;
+  }
+
+  img:nth-child(1) {
+    left: 0;
+  }
+
+  img:nth-child(2) {
+    left: 20px;
+  }
+
+  img:nth-child(3) {
+    left: 40px;
+  }
+
+  img:nth-child(4) {
+    left: 60px;
+  }
+}

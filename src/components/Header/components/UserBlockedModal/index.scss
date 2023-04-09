@@ -1,0 +1,55 @@
+.user-blocked-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 310px;
+  margin: 0 auto;
+
+  .user-blocked-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 15px auto;
+    }
+
+    .logout-button {
+      margin: 10px auto 0 auto;
+    }
+  }
+
+  .user-blocked-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #5A536D;
+
+    a {
+      width: fit-content;
+      margin: 15px auto 0 auto;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      color: #3D3846;
+      border-bottom: 1px solid #A4A2A8;
+      transition: 0.2s;
+
+      &:hover {
+        color: #D0383F;
+        border-bottom: 1px solid #D0383F;
+      }
+    }
+  }
+}
+

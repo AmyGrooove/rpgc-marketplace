@@ -1,0 +1,33 @@
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #0b0a11;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(16, 15, 24, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #5A536D;
+    border-radius: 100px;
+  }
+}
+
+.border {
+  border: 1px solid #850b0b;
+}
+
+main {
+  min-height: calc(100vh - 207px);
+  background-color: #15121e;
+  padding-top: 80px;
+
+  @media screen and (max-width: 1269px) {
+    min-height: calc(100vh - 240px);
+  }
+}

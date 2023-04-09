@@ -1,0 +1,33 @@
+.filter-buttons {
+  display: flex;
+  flex-direction: row;
+
+  .button {
+    padding: 11.5px 30px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.2s;
+    background: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #A4A2A8;
+    transition: 0.2s;
+
+    &.active {
+      border: 1px solid #D0383F;
+      color: #FFFFFF;
+    }
+
+    &:hover {
+      color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 1269px) {
+      font-size: 14px;
+      padding: 8px 14px;
+    }
+  }
+}

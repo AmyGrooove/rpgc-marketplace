@@ -1,0 +1,21 @@
+.toolbar-container {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 940px;
+
+  @media screen and (max-width: 1269px) {
+    display: none;
+  }
+}
+
+.rarity-n-price-filter-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+
+  .rarity-filter-container {
+    margin-right: 20px;
+  }
+}

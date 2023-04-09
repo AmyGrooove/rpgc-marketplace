@@ -1,0 +1,41 @@
+.notFound-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .notFound-block {
+    border-radius: 20px;
+    background: linear-gradient(153.27deg, #262134 0%, #1b1726 100%);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .notFound-text {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 48px;
+      color: #ffffff;
+    }
+
+    button {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #ffffff;
+      border: none;
+      background: #544a6e;
+      border-radius: 20px;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background: #38314b;
+      }
+    }
+  }
+}

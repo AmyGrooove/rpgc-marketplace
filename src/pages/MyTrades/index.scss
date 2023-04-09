@@ -1,0 +1,12 @@
+.my-trades {
+  width: 1270px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1269px) {
+    width: unset;
+    padding: 15px 0 5px 0;
+  }
+}

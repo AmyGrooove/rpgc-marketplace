@@ -1,0 +1,36 @@
+.auth-form-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 24px;
+  background: #d0383f;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: #AD171E;
+  }
+
+  &_transparent {
+    background: transparent;
+    border: 1px solid #d0383f;
+  }
+
+  .icon {
+    width: 21px;
+    height: 20px;
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width: 1269px) {
+    font-size: 16px;
+    padding: 13px 24px;
+    background: #332D43;
+  }
+}

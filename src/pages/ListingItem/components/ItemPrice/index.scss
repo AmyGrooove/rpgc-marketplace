@@ -1,0 +1,79 @@
+@mixin value {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+@mixin text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.item-price-component {
+  width: 290px;
+  margin-top: 20px;
+  border: 1px solid #2C2A34;
+  border-radius: 20px;
+
+  .min-max {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 20px 30px;
+
+    .min,
+    .max {
+      display: flex;
+      flex-direction: column;
+
+      .value-icon {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        .value {
+          @include value;
+        }
+
+        .icon {
+          margin: 0 0 0 10px;
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      .text {
+        @include text;
+        margin: 0 auto;
+      }
+    }
+
+    .separator {
+      width: 1px;
+      height: 50px;
+      background: #2C2A34;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    width: unset;
+    border: none;
+    margin: 15px auto 0 auto;
+
+    .min-max {
+      padding: 0;
+      justify-content: center;
+    }
+
+    .separator {
+      margin: 0 25px !important;
+    }
+  }
+}

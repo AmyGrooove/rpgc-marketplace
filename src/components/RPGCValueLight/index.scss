@@ -1,0 +1,30 @@
+.rpgc-value-light {
+  display: flex;
+  align-items: center;
+
+  .price {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0B0A11;
+    white-space: nowrap;
+  }
+
+  .currency {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin: 0 5px 0 10px;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      color: #5A536D;
+    }
+  }
+}

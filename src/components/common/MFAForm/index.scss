@@ -1,0 +1,86 @@
+.auth-input-container {
+  width: 328px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 132px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+  }
+
+  .auth-form-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #ffffff;
+    padding-bottom: 40px;
+
+    .auth-form-description {
+      padding-top: 16px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      color: #a4a2a8;
+    }
+  }
+
+  .mfa-input-field {
+    input {
+      padding-bottom: 6px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+      color: #ffffff;
+      background: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid #2c2a34;
+      border-radius: 0;
+
+      &:focus-visible {
+        outline: 0;
+      }
+
+      &:focus-within {
+        border-bottom: 1px solid #d0383f;
+      }
+    }
+  }
+
+  .MFAForm-actions-container {
+    width: 228px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .form-change-actions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    span {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      color: #d0383f;
+      text-decoration-line: underline;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    &_disabled {
+      span {
+        color: #44414d;
+      }
+    }
+  }
+}

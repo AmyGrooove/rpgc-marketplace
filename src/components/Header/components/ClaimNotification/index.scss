@@ -1,0 +1,56 @@
+.claim-notification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .icon.circles {
+    width: 32px;
+    height: 32px;
+    z-index: 12;
+
+    svg {
+      width: 32px;
+      height: 32px;
+
+      g {
+        opacity: 1;
+      }
+
+      circle {
+        stroke: #A4A2A8;
+      }
+
+      path {
+        fill: #A4A2A8;
+      }
+    }
+  }
+
+  .reward-info {
+    margin: 0 30px 0 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #696478;
+
+    .rpgc-value-light {
+      margin-bottom: 5px;
+    }
+  }
+
+  .claim-btn {
+    cursor: pointer;
+    padding: 8px 12px;
+    background: #D0383F;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #FFFFFF;
+    transition: 0.2s;
+
+    &:hover {
+      background: #AD171E;
+    }
+  }
+}

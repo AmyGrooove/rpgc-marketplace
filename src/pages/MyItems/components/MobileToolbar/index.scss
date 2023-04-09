@@ -1,0 +1,34 @@
+.mobile-toolbar-container {
+
+  .top {
+    padding: 0 15px;
+    display: flex;
+
+    .categories-filter {
+      width: 105px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12.5px 0;
+
+    .mobile-filter {
+      min-width: 76px;
+      margin: 0 auto;
+    }
+
+    .mobile-filter:last-child {
+      display: flex;
+      justify-content: center;
+    }
+
+    .divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
